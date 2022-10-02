@@ -28,53 +28,102 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number02()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("yyyy.MM.dd");
+        Console.WriteLine(date);
+
+        return date;
     }
 
     public string Number03()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("dd");
+        var date1 = _date.Now.ToString("MMMM");
+        var date2 = _date.Now.ToString("yyyy");
+        var answer = $"Day {date} of {date1}, {date2}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number04()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("yyyy");
+        var date1 = _date.Now.ToString("MM");
+        var date2 = _date.Now.ToString("dd");
+        var answer = $"Year: {date}, Month: {date1}, Day: {date2}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number05()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("dddd");
+        var answer = $"{date,10}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number06()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("t");
+        var date1 = _date.Now.ToString("dddd");
+        var answer = $"{date,10}{date1,10}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number07()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("hh");
+        var date1 = _date.Now.ToString("mm");
+        var date2 = _date.Now.ToString("ss");
+        var answer = $"h:{date}, m:{date1}, s:{date2}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number08()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("yyyy");
+        var date1 = _date.Now.ToString("MM");
+        var date2 = _date.Now.ToString("dd");
+        var date3 = _date.Now.ToString("hh");
+        var date4 = _date.Now.ToString("mm");
+        var date5 = _date.Now.ToString("ss");
+        var answer = $"{date}.{date1}.{date2}.{date3}.{date4}.{date5}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number09()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        var answer = $"{pi:C2}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number10()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        var answer = $"{pi,10:N3}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number11()
     {
-        throw new NotImplementedException();
-    }
+        var date = $"{DateTime.Now:yyyy}";
+        var answer = Convert.ToInt64(date).ToString("X");
+        Console.WriteLine(answer);
 
-    //2.2019.01.22
+        return answer;
+    }
 }
